@@ -1,0 +1,216 @@
+.container {
+  max-width: 900px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-top: 30px;
+}
+
+.discountmsg {
+  background: linear-gradient(90deg, #ff9a3c, #ff5f1f);
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #ffe9d6;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.table tbody tr:hover {
+  background: #f8f8f8;
+  transition: 0.3s;
+}
+
+td img {
+  border-radius: 50%;
+}
+
+.btn {
+  border-radius: 10px !important;
+  padding: 6px 10px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff4d4d !important;
+  color: white !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #06b6d4 !important;
+  color: white !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: #f59e0b !important;
+  color: white !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ef4444 !important;
+  color: white !important;
+}
+
+.EmailSection input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 280px;
+  margin-right: 10px;
+}
+
+.EmailSection input:focus {
+  outline: none;
+  border: 1px solid #ff5f1f;
+}
+
+h4.text-success {
+  color: #22c55e !important;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.alert-warning {
+  background-color: #fff4e4;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 15px;
+}
+
+/* ====================================== */
+/* 📱 FULL RESPONSIVE MEDIA QUERIES */
+/* ====================================== */
+
+
+/* 🔵 1) Large Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+  }
+  .EmailSection input {
+    width: 260px;
+  }
+}
+
+
+
+/* 🟣 2) Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  .table thead {
+    font-size: 12px;
+  }
+
+  td img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .EmailSection input {
+    width: 240px;
+  }
+
+  .cart-layout .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+
+/* 🟠 3) Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h4.text-success {
+    font-size: 20px;
+  }
+
+  td img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .table thead {
+    font-size: 11px;
+  }
+
+  .EmailSection input {
+    width: 220px;
+  }
+
+  .btn {
+    padding: 5px 8px !important;
+    font-size: 14px !important;
+  }
+
+  .payment-section {
+    margin-top: 20px;
+  }
+}
+
+
+
+/* 🔴 4) Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .discountmsg {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  td img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .EmailSection input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px !important;
+    font-size: 15px !important;
+  }
+
+  .qr-box {
+    padding: 10px;
+  }
+}
+

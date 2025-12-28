@@ -1,0 +1,149 @@
+/* ----------------------- Footer Main ----------------------- */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 25px 0 15px;
+  margin-top: auto; /* Push footer to bottom on short pages */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Container */
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-section a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ffbb00;
+}
+
+/* Logo Section */
+.footer-logo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-style: italic;
+  color: #ffc107;
+  font-size: 14px;
+}
+
+/* Social Media Icons */
+.footer-social img {
+  height: 35px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  margin-top: 15px;
+  text-align: center;
+  color: #aaa;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  font-size: 13px;
+}
+
+/* ========================= Responsive ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section a {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    height: 80px;
+  }
+
+  .footer-social img {
+    height: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+
+  .footer-logo {
+    height: 70px;
+    margin: 0 auto 8px;
+  }
+
+  .footer-social img {
+    height: 25px;
+    margin: 5px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .footer-section a {
+    font-size: 13px;
+  }
+
+  .footer-logo {
+    height: 60px;
+  }
+
+  .footer-social img {
+    height: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

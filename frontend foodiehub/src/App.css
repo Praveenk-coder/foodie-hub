@@ -1,0 +1,256 @@
+/* =============================== */
+/* 🔥 NAVBAR STYLING (Professional) */
+/* =============================== */
+
+.custom-navbar {
+  background: linear-gradient(90deg, #0a1832, #12284a) !important;
+  padding: 12px 40px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Brand Styling */
+.brand-name {
+  color: white !important;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  color: #dcdcdc !important;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.logo-img {
+  filter: brightness(90%);
+}
+
+/* Remove default underline */
+.nav-link,
+.nav-link-custom,
+.navbar a {
+  text-decoration: none !important;
+  outline: none;
+}
+
+/* Nav Links */
+.nav-link-custom {
+  color: #f1f1f1 !important;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 12px;
+  position: relative;
+  padding: 5px 0 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: #ff5722 !important;
+  transform: translateY(-2px);
+}
+
+/* Remove even default underline on focus */
+.nav-link-custom:focus {
+  text-decoration: none !important;
+  outline: none;
+}
+
+/* Hover Underline Animation */
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #ff5722;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+/* Active Link */
+.nav-link-custom.active {
+  color: #ff5722 !important;
+  font-weight: 600;
+}
+
+.nav-link-custom.active::after {
+  width: 100%;
+}
+
+/* Cart Badge */
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background: #ff5722;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+/* Full width fix */
+.container-fluid {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+/* App Wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should expand to fill remaining space */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =============================== */
+/* 📱 FULL RESPONSIVE MEDIA QUERIES */
+/* =============================== */
+
+
+/* 🔷 1) Large Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .brand-name {
+    font-size: 22px;
+  }
+  .nav-link-custom {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  .custom-navbar {
+    padding: 10px 30px !important;
+  }
+}
+
+
+/* 🔶 2) Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+  /* Reduce padding so navbar fits when it collapses */
+  .custom-navbar {
+    padding: 10px 20px !important;
+  }
+
+  /* Center nav links inside mobile dropdown */
+  .nav-link-custom {
+    padding: 12px 0;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  /* Prevent hover lift effect from breaking layout */
+  .nav-link-custom:hover {
+    transform: none;
+  }
+
+  /* Make underline animation centered */
+  .nav-link-custom::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+/* 🟧 3) Phones (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Brand & Logo Adjust */
+  .brand-name {
+    font-size: 20px;
+  }
+  .tagline {
+    font-size: 12px;
+  }
+
+  /* Hamburger icon spacing */
+  .navbar-toggler {
+    padding: 4px;
+  }
+
+  /* Nav links bigger for touch screens */
+  .nav-link-custom {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
+
+/* 🟥 4) Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  /* Reduce navbar padding even more */
+  .custom-navbar {
+    padding: 8px 14px !important;
+  }
+
+  /* Brand size small */
+  .brand-name {
+    font-size: 18px;
+  }
+
+  /* Hide tagline on very tiny screens */
+  .tagline {
+    display: none;
+  }
+
+  /* Nav links full width */
+  .nav-link-custom {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  /* Cart badge smaller */
+  .cart-badge {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    right: -8px;
+  }
+}
+
