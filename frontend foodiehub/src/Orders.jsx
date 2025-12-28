@@ -9,6 +9,14 @@ function Orders() {
   const { loading, error, orders } = useSelector((state) => state.allorders);
   const { user } = useSelector((state) => state.auth);
 
+  useEffect(() => {
+   
+    if (!user) return;
+
+    const userId = user._id || user.id;
+    dispatch(fetchOrders(userId));
+  }, [dispatch, user]);
+
   // If user is not logged in
   if (!user) {
     return (
@@ -18,14 +26,6 @@ function Orders() {
       </div>
     );
   }
-
-  useEffect(() => {
-   
-    if (!user) return;
-
-    const userId = user._id || user.id;
-    dispatch(fetchOrders(userId));
-  }, [dispatch,user]);
 
   return (
     <div className="orders-container">

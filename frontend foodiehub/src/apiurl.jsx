@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiurl=axios.create({
-    baseURL:"http://localhost:3000"
+    baseURL: "https://foodiehub-backend-mwfg.onrender.com"
 });
 apiurl.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
