@@ -6,7 +6,7 @@ import NonVeg from "./Nonveg";
 import Aboutus from "./Aboutus";
 import Cart from "./Cart";
 import Orders from "./Orders";
-import RegistrationForm from "./registrationForm";
+import RegistrationForm from "./RegistrationForm";
 import Login from "./Login";
 import { logout } from "./store";
 import { ToastContainer } from "react-toastify";
